@@ -12,7 +12,6 @@
 
 version="0.0.1"
 scriptBasename="jar_pm.sh"
-scriptPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 logFile="/tmp/${scriptBasename}.`date "+%Y%m%d"`.log"
 procName="repox-assembly-0.1-SNAPSHOT.jar"
 procPath="/Users/diggzhang/code/sbt/repox/target/scala-2.11/repox-assembly-0.1-SNAPSHOT.jar"
