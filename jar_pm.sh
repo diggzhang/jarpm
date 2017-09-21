@@ -11,10 +11,11 @@ version="0.0.1"
 #
 # ##################################################
 
-scriptBasename="java_pm"
+scriptBasename="jar_pm.sh"
 scriptPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-logFile="/tmp/${scriptBasename}_`date "+%Y%m%d"`.log"
+logFile="/tmp/${scriptBasename}.`date "+%Y%m%d"`.log"
 procName="repox-assembly-0.1-SNAPSHOT.jar"  #TODO params into
+procPath="/Users/diggzhang/code/sbt/repox/target/scala-2.11/repox-assembly-0.1-SNAPSHOT.jar"
 
 echolog()
 (
@@ -42,7 +43,7 @@ echo $number
 
 if [ $number -eq 0 ]
 then
-    nohup java -Xmx512m -jar /Users/diggzhang/code/sbt/repox/target/scala-2.11/repox-assembly-0.1-SNAPSHOT.jar >> /tmp/repox.log 2>&1 &
+    nohup java -Xmx512m -jar $procPath >> /tmp/$procName_`date "+%Y%m%d"`.log 2>&1 &
     proc_id
     echolog ${pid}
 fi
